@@ -64,8 +64,8 @@ resource "aws_launch_template" "AmazonLinux2-Spot" {
 resource "aws_ec2_fleet" "AmazonLinux2-Spot" {
   launch_template_config {
     launch_template_specification {
-      version            = [aws_launch_template.AmazonLinux2-Spot.latest_version]
-      launch_template_id = [aws_launch_template.AmazonLinux2-Spot.id]
+      version            = [AmazonLinux2-Spot.latest_version]
+      launch_template_id = [AmazonLinux2-Spot.id]
     }
   }
   spot_options {
