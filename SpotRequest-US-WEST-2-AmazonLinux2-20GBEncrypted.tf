@@ -36,12 +36,12 @@ resource "aws_launch_template" "AmazonLinux2-Spot" {
   monitoring {
     enabled = "false"
   }
-  network_interfaces {
-    associate_public_ip_address = "true"
-    delete_on_termination       = "true"
-    description                 = "eth0"
-    device_index                = 0
-  }
+  #network_interfaces {
+  #  associate_public_ip_address = "true"
+  #  delete_on_termination       = "true"
+  #  description                 = "eth0"
+  #  device_index                = 0
+  #}
   placement {
     tenancy = "default"
   }
